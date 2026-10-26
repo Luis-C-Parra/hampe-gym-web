@@ -5,7 +5,8 @@ const galleryImages = [
     'foto3.jpg',
     'foto4.jpg',
     'foto5.jpg',
-    'foto6.jpg'
+    'foto6.jpg',
+    'foto7.jpg'
 ];
 
 document.addEventListener('DOMContentLoaded', () => {
