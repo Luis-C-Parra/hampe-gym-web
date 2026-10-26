@@ -90,7 +90,7 @@ body {
 /* HERO SECTION */
 .hero {
     min-height: 100vh;
-    background: url('images/gallery/foto1.jpg') center/cover no-repeat;
+    background: url('images/hero-presentacion.jpg') center/cover no-repeat;
     position: relative;
     display: flex;
     align-items: center;
