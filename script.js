@@ -57,3 +57,22 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+// Función para alternar la vista de horarios (Tabla o Imagen)
+function switchScheduleView(viewType) {
+    const tableView = document.getElementById('schedule-table-view');
+    const imageView = document.getElementById('schedule-image-view');
+    const buttons = document.querySelectorAll('.tab-btn');
+
+    buttons.forEach(btn => btn.classList.remove('active'));
+
+    if (viewType === 'table') {
+        tableView.classList.add('active');
+        imageView.classList.remove('active');
+        buttons[0].classList.add('active');
+    } else {
+        imageView.classList.add('active');
+        tableView.classList.remove('active');
+        buttons[1].classList.add('active');
+    }
+}

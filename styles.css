@@ -393,3 +393,124 @@ body {
     .hero-subtitle { font-size: 1rem; letter-spacing: 2px; }
     .hero-logo-large { width: 180px; }
 }
+
+/* SECCIÓN HORARIOS */
+.schedule-section {
+    padding: 80px 8%;
+    background-color: var(--bg-dark);
+    text-align: center;
+}
+
+.schedule-subtitle {
+    max-width: 700px;
+    margin: 0 auto 30px;
+    color: var(--text-muted);
+}
+
+.schedule-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.tab-btn {
+    background-color: var(--bg-card);
+    color: var(--text-light);
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    padding: 10px 22px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.tab-btn.active, .tab-btn:hover {
+    background: var(--gold-gradient);
+    color: #000;
+    border-color: var(--gold-primary);
+}
+
+.schedule-view {
+    display: none;
+}
+
+.schedule-view.active {
+    display: block;
+}
+
+/* TABLA DE HORARIOS */
+.table-responsive {
+    overflow-x: auto;
+    border-radius: 12px;
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    box-shadow: 0 0 25px rgba(0,0,0,0.6);
+}
+
+.schedule-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--bg-card);
+    color: var(--text-light);
+    font-size: 0.95rem;
+}
+
+.schedule-table th, .schedule-table td {
+    padding: 14px 10px;
+    border: 1px solid rgba(212, 175, 55, 0.15);
+    text-align: center;
+}
+
+.schedule-table th {
+    background-color: #1a1a1a;
+    color: var(--gold-primary);
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.schedule-table .time-col {
+    font-weight: bold;
+    color: var(--gold-light);
+    background-color: #111111;
+}
+
+.schedule-table tbody tr:hover {
+    background-color: rgba(212, 175, 55, 0.05);
+}
+
+/* FLYER DE IMAGEN */
+.schedule-img-box {
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+.schedule-img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    border: 2px solid var(--gold-primary);
+    box-shadow: 0 0 25px rgba(212, 175, 55, 0.2);
+}
+
+.schedule-actions {
+    margin-top: 20px;
+}
+
+.btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 28px;
+    background-color: transparent;
+    color: var(--gold-primary);
+    border: 2px solid var(--gold-primary);
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background: var(--gold-gradient);
+    color: #000;
+}

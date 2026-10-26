@@ -26,13 +26,140 @@
             <i class="fas fa-bars"></i>
         </button>
 
-        <nav class="navbar" id="navbar">
-            <a href="#inicio" class="nav-link">Inicio</a>
-            <a href="#nosotros" class="nav-link">Nosotros</a>
-            <a href="#disciplinas" class="nav-link">Disciplinas</a>
-            <a href="#galeria" class="nav-link">Galería</a>
-            <a href="#contacto" class="nav-link">Contacto</a>
-        </nav>
+        <!-- En el menú de navegación (header): -->
+<nav class="navbar" id="navbar">
+    <a href="#inicio" class="nav-link">Inicio</a>
+    <a href="#nosotros" class="nav-link">Nosotros</a>
+    <a href="#disciplinas" class="nav-link">Disciplinas</a>
+    <a href="#horarios" class="nav-link">Horarios</a>
+    <a href="#galeria" class="nav-link">Galería</a>
+    <a href="#contacto" class="nav-link">Contacto</a>
+</nav>
+
+<!-- NUEVA SECCIÓN DE HORARIOS -->
+<section id="horarios" class="schedule-section">
+    <div class="container">
+        <h2 class="section-title">GRILLA DE HORARIOS Y ACTIVIDADES</h2>
+        <p class="schedule-subtitle text-justified">
+            Consulta nuestras clases semanales. Diseñamos cada estímulo para potenciar tu movimiento, fuerza y movilidad funcional.
+        </p>
+
+        <!-- Botones de alternancia entre Tabla e Imagen -->
+        <div class="schedule-tabs">
+            <button class="tab-btn active" onclick="switchScheduleView('table')">
+                <i class="fas fa-table"></i> Grilla Interactiva
+            </button>
+            <button class="tab-btn" onclick="switchScheduleView('image')">
+                <i class="fas fa-image"></i> Ver Flyer Oficial
+            </button>
+        </div>
+
+        <!-- Vista 1: Grilla Adaptable en HTML -->
+        <div id="schedule-table-view" class="schedule-view active">
+            <div class="table-responsive">
+                <table class="schedule-table">
+                    <thead>
+                        <tr>
+                            <th>HORA</th>
+                            <th>LUNES</th>
+                            <th>MARTES</th>
+                            <th>MIÉRCOLES</th>
+                            <th>JUEVES</th>
+                            <th>VIERNES</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="time-col">07:30</td>
+                            <td>PRIMITIVE</td>
+                            <td>PRIMITIVE</td>
+                            <td>PRIMITIVE</td>
+                            <td>PRIMITIVE</td>
+                            <td>PRIMITIVE</td>
+                        </tr>
+                        <tr>
+                            <td class="time-col">08:30</td>
+                            <td>PRIMITIVE</td>
+                            <td>PRIMITIVE</td>
+                            <td>PRIMITIVE</td>
+                            <td>PRIMITIVE</td>
+                            <td>PRIMITIVE</td>
+                        </tr>
+                        <tr>
+                            <td class="time-col">09:30</td>
+                            <td>CLUBB / MACEBELL</td>
+                            <td>PRIMITIVE</td>
+                            <td>HIPOPRESIVOS</td>
+                            <td>CLUBB / MACEBELL</td>
+                            <td>PRIMITIVE</td>
+                        </tr>
+                        <tr>
+                            <td class="time-col">10:30</td>
+                            <td>STRETCHING</td>
+                            <td>BODY FLOW</td>
+                            <td>CLUBB / MACEBELL</td>
+                            <td>BODY FLOW</td>
+                            <td>ENTRENAMIENTO PERSONALIZADO</td>
+                        </tr>
+                        <tr>
+                            <td class="time-col">16:30</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>YOGA</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td class="time-col">17:30</td>
+                            <td>PRIMITIVE</td>
+                            <td>PRIMITIVE</td>
+                            <td>MARCIAL BOX</td>
+                            <td>PRIMITIVE</td>
+                            <td>WORKOUT</td>
+                        </tr>
+                        <tr>
+                            <td class="time-col">18:30</td>
+                            <td>PRIMITIVE</td>
+                            <td>PRIMITIVE</td>
+                            <td>PRIMITIVE</td>
+                            <td>PRIMITIVE</td>
+                            <td>PRIMITIVE</td>
+                        </tr>
+                        <tr>
+                            <td class="time-col">19:30</td>
+                            <td>PRIMITIVE</td>
+                            <td>STRETCHING</td>
+                            <td>CLUBB / MACEBELL</td>
+                            <td>SCULPT & FLOW</td>
+                            <td>PRIMITIVE</td>
+                        </tr>
+                        <tr>
+                            <td class="time-col">20:30</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>BODY FLOW</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Vista 2: Imagen Oficial para ver y descargar -->
+        <div id="schedule-image-view" class="schedule-view">
+            <div class="schedule-img-box">
+                <img src="images/HORARIO.jpg" alt="Grilla de Horarios HAMPE" class="schedule-img">
+                <div class="schedule-actions">
+                    <a href="images/HORARIO.jpg" download="Horarios_HAMPE.jpg" class="btn-secondary">
+                        <i class="fas fa-download"></i> Descargar Horario
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
     </header>
 
     <!-- Sección Inicio / Hero con Logo Prominente -->
