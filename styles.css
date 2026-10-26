@@ -1,4 +1,4 @@
-/* RESET & VARIABLES */
+/* VARIABLES Y ESTILOS GLOBALES */
 :root {
     --bg-dark: #0a0a0a;
     --bg-card: #141414;
@@ -24,6 +24,12 @@ body {
     scroll-behavior: smooth;
 }
 
+/* TEXTOS JUSTIFICADOS */
+.text-justified {
+    text-align: justify;
+    text-justify: inter-word;
+}
+
 /* HEADER & NAV */
 .header {
     display: flex;
@@ -47,6 +53,7 @@ body {
 .nav-logo {
     height: 45px;
     border-radius: 50%;
+    border: 1px solid var(--gold-primary);
 }
 
 .brand-name {
@@ -56,6 +63,16 @@ body {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     letter-spacing: 2px;
+}
+
+/* MENÚ HAMBURGUESA (MÓVIL) */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--gold-primary);
+    font-size: 1.8rem;
+    cursor: pointer;
 }
 
 .navbar a {
@@ -71,10 +88,8 @@ body {
 }
 
 /* HERO SECTION */
-/* HERO SECTION CON FONDO DE EJERCICIO Y LOGO DESTACADO */
 .hero {
     min-height: 100vh;
-    /* Imagen de fondo de ejercicio (puedes usar foto1.jpg de Primitive Training) */
     background: url('images/gallery/foto1.jpg') center/cover no-repeat;
     position: relative;
     display: flex;
@@ -89,8 +104,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    /* Capa oscura sutil con tinte dorado para resaltar el contenido */
-    background: linear-gradient(180deg, rgba(10, 10, 10, 0.85) 0%, rgba(10, 10, 10, 0.7) 50%, rgba(10, 10, 10, 0.95) 100%);
+    background: linear-gradient(180deg, rgba(10, 10, 10, 0.88) 0%, rgba(10, 10, 10, 0.75) 50%, rgba(10, 10, 10, 0.95) 100%);
     z-index: 1;
 }
 
@@ -105,14 +119,13 @@ body {
     gap: 20px;
 }
 
-/* LOGO DESTACADO GRANDE */
 .hero-logo-large {
-    width: 260px;
-    max-width: 80vw;
+    width: 250px;
+    max-width: 75vw;
     height: auto;
     border-radius: 50%;
-    border: 3px solid #d4af37;
-    box-shadow: 0 0 35px rgba(212, 175, 55, 0.4), inset 0 0 15px rgba(212, 175, 55, 0.2);
+    border: 3px solid var(--gold-primary);
+    box-shadow: 0 0 35px rgba(212, 175, 55, 0.4);
     transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
@@ -121,16 +134,14 @@ body {
     box-shadow: 0 0 45px rgba(212, 175, 55, 0.6);
 }
 
-/* TIPOGRAFÍA HERO */
 .hero-title {
     font-size: 3.5rem;
     font-weight: 900;
     letter-spacing: 6px;
-    background: linear-gradient(135deg, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c);
+    background: var(--gold-gradient);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-transform: uppercase;
-    margin-bottom: 5px;
 }
 
 .hero-subtitle {
@@ -138,18 +149,16 @@ body {
     color: #ffffff;
     letter-spacing: 4px;
     font-weight: 600;
-    text-transform: uppercase;
 }
 
 .tagline {
-    color: #d4af37;
+    color: var(--gold-primary);
     font-size: 1.1rem;
     letter-spacing: 3px;
     font-weight: 500;
     margin: 10px 0 25px;
 }
 
-/* BOTÓN DE WHATSAPP CON DEGRADADO DORADO ELEGANTE */
 .btn-whatsapp {
     display: inline-flex;
     align-items: center;
@@ -159,89 +168,17 @@ body {
     font-size: 1.1rem;
     font-weight: 700;
     color: #0a0a0a;
-    background: linear-gradient(135deg, #e6c875, #d4af37, #997a15);
+    background: var(--gold-gradient);
     border: none;
     border-radius: 50px;
     text-decoration: none;
-    cursor: pointer;
     box-shadow: 0 4px 20px rgba(212, 175, 55, 0.35);
     transition: all 0.3s ease;
-}
-
-.btn-whatsapp i {
-    font-size: 1.4rem;
 }
 
 .btn-whatsapp:hover {
     transform: translateY(-3px);
     box-shadow: 0 8px 25px rgba(212, 175, 55, 0.55);
-    background: linear-gradient(135deg, #f3e5ab, #e6c875, #b38728);
-}
-
-/* AJUSTES RESPONSIVOS (MÓVILES) */
-@media (max-width: 768px) {
-    .hero-logo-large {
-        width: 190px;
-    }
-    .hero-title {
-        font-size: 2.5rem;
-        letter-spacing: 4px;
-    }
-    .hero-subtitle {
-        font-size: 1rem;
-        letter-spacing: 2px;
-    }
-    .tagline {
-        font-size: 0.9rem;
-    }
-    .btn-whatsapp {
-        padding: 12px 26px;
-        font-size: 1rem;
-    }
-}
-
-.hero-content {
-    position: relative;
-    z-index: 2;
-}
-
-.hero-content h1 {
-    font-size: 4rem;
-    letter-spacing: 5px;
-    background: var(--gold-gradient);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.hero-content h2 {
-    font-size: 1.5rem;
-    color: var(--text-light);
-    margin-bottom: 10px;
-    letter-spacing: 3px;
-}
-
-.tagline {
-    color: var(--gold-primary);
-    font-size: 1.1rem;
-    margin-bottom: 30px;
-    letter-spacing: 2px;
-}
-
-/* BUTTONS */
-.btn-primary {
-    display: inline-block;
-    padding: 12px 30px;
-    background: var(--gold-gradient);
-    color: #000;
-    font-weight: bold;
-    text-decoration: none;
-    border-radius: 30px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.btn-primary:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(212, 175, 55, 0.4);
 }
 
 /* ABOUT SECTION */
@@ -276,14 +213,18 @@ body {
     font-style: italic;
 }
 
+.about-text p {
+    margin-bottom: 15px;
+}
+
 .location-badge {
-    margin-top: 25px;
+    margin-top: 15px;
     display: inline-flex;
     align-items: center;
     gap: 10px;
     color: var(--gold-primary);
     background: var(--bg-card);
-    padding: 10px 20px;
+    padding: 12px 20px;
     border-radius: 8px;
     border: 1px solid rgba(212, 175, 55, 0.3);
 }
@@ -339,20 +280,19 @@ body {
     text-align: center;
 }
 
-/* GALERÍA CON IMÁGENES COMPLETAS (SIN RECORTAR) */
 .gallery-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 20px;
+    gap: 25px;
     align-items: start;
 }
 
 .gallery-item {
     background-color: var(--bg-card);
-    border-radius: 8px;
+    border-radius: 10px;
     border: 1px solid rgba(212, 175, 55, 0.2);
     overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
     transition: transform 0.3s ease, border-color 0.3s ease;
 }
 
@@ -363,14 +303,9 @@ body {
 
 .gallery-item img {
     width: 100%;
-    height: auto;           /* Permite que la altura sea proporcional */
+    height: auto;
     display: block;
-    object-fit: contain;     /* Muestra la imagen entera sin recortar */
-}
-}
-
-.gallery-item:hover img {
-    transform: scale(1.08);
+    object-fit: contain;
 }
 
 /* FOOTER */
@@ -379,6 +314,13 @@ body {
     padding: 50px 20px 20px;
     text-align: center;
     border-top: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.footer-tagline {
+    color: var(--gold-primary);
+    margin-top: 5px;
+    font-size: 0.9rem;
+    letter-spacing: 2px;
 }
 
 .social-links {
@@ -390,7 +332,7 @@ body {
 }
 
 .social-btn {
-    padding: 10px 20px;
+    padding: 10px 22px;
     border-radius: 25px;
     text-decoration: none;
     color: #fff;
@@ -401,10 +343,7 @@ body {
     transition: opacity 0.3s ease;
 }
 
-.social-btn:hover {
-    opacity: 0.85;
-}
-
+.social-btn:hover { opacity: 0.85; }
 .social-btn.whatsapp { background-color: #25D366; }
 .social-btn.instagram { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); }
 .social-btn.facebook { background-color: #1877F2; }
@@ -419,15 +358,36 @@ body {
     font-size: 0.85rem;
 }
 
-/* RESPONSIVE */
+/* RESPONSIVE & MENÚ MÓVIL */
 @media (max-width: 768px) {
-    .about-grid {
-        grid-template-columns: 1fr;
+    .menu-toggle {
+        display: block;
     }
-    .hero-content h1 {
-        font-size: 2.8rem;
-    }
+
     .navbar {
-        display: none; /* Se puede expandir con un menú hamburguesa */
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: rgba(10, 10, 10, 0.98);
+        flex-direction: column;
+        padding: 20px 0;
+        border-bottom: 1px solid rgba(212, 175, 55, 0.3);
     }
+
+    .navbar.active {
+        display: flex;
+    }
+
+    .navbar a {
+        margin: 12px 0;
+        font-size: 1.1rem;
+        text-align: center;
+    }
+
+    .about-grid { grid-template-columns: 1fr; }
+    .hero-title { font-size: 2.4rem; letter-spacing: 3px; }
+    .hero-subtitle { font-size: 1rem; letter-spacing: 2px; }
+    .hero-logo-large { width: 180px; }
 }

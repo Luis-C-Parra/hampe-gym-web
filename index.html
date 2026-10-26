@@ -10,31 +10,34 @@
 </head>
 <body>
 
-    <!-- Header / Navegación -->
+    <!-- Header / Navegación principal -->
     <header class="header">
         <div class="logo-container">
             <img src="images/logo.jpg" alt="Logo HAMPE" class="nav-logo">
             <span class="brand-name">HAMPE</span>
         </div>
-        <nav class="navbar">
-            <a href="#inicio">Inicio</a>
-            <a href="#nosotros">Nosotros</a>
-            <a href="#disciplinas">Disciplinas</a>
-            <a href="#galeria">Galería</a>
-            <a href="#contacto">Contacto</a>
+        
+        <!-- Botón menú hamburguesa para móviles -->
+        <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú">
+            <i class="fas fa-bars"></i>
+        </button>
+
+        <nav class="navbar" id="navbar">
+            <a href="#inicio" class="nav-link">Inicio</a>
+            <a href="#nosotros" class="nav-link">Nosotros</a>
+            <a href="#disciplinas" class="nav-link">Disciplinas</a>
+            <a href="#galeria" class="nav-link">Galería</a>
+            <a href="#contacto" class="nav-link">Contacto</a>
         </nav>
     </header>
 
-    <!-- Sección Inicio / Hero Actualizada -->
+    <!-- Sección Inicio / Hero con Logo Prominente -->
     <section id="inicio" class="hero">
         <div class="hero-overlay"></div>
         <div class="hero-container">
-            <!-- Logo Prominente / Grande -->
             <div class="hero-logo-box">
                 <img src="images/logo.jpg" alt="Logo HAMPE" class="hero-logo-large">
             </div>
-            
-            <!-- Contenido y Botón -->
             <div class="hero-text-box">
                 <h1 class="hero-title">HAMPE</h1>
                 <h2 class="hero-subtitle">CENTRO DE ENTRENAMIENTO</h2>
@@ -51,13 +54,13 @@
         <div class="container">
             <div class="about-grid">
                 <div class="about-img-box">
-                    <img src="images/hero-presentacion.jpg" alt="Entrenamiento HAMPE" class="about-img">
+                    <img src="images/hero-presentacion.jpg" alt="Entrenamiento HAMPE Clavas" class="about-img">
                 </div>
                 <div class="about-text">
                     <h2>NUESTROS OBJETIVOS</h2>
                     <p class="subtitle">Especialistas en movimiento eficiente y trabajo corporal integral</p>
-                    <p>En <strong>HAMPE</strong> nos enfocamos en el desarrollo de la fuerza real, la movilidad funcional y la conciencia corporal a través de metodologías innovadoras y primitivas[cite: 6].</p>
-                    <p>Trabajamos combinando herramientas tradicionales como <strong>macebells y clavas de hierro (clubbells)</strong> con programas enfocados exclusivamente en <strong>bodyweight</strong> y la disciplina <strong>Primitive Training</strong>, donde entrenamos sin elementos externos reconectando con los patrones naturales del cuerpo[cite: 6].</p>
+                    <p class="text-justified">En <strong>HAMPE</strong> nos enfocamos en el desarrollo de la fuerza real, la movilidad funcional y la conciencia corporal a través de metodologías innovadoras y primitivas.</p>
+                    <p class="text-justified">Trabajamos combinando herramientas tradicionales de hierro como <strong>clavas y macebells</strong> con programas enfocados exclusivamente en <strong>bodyweight</strong> y la disciplina <strong>Primitive Training</strong>, donde entrenamos únicamente con peso corporal reconectando con los patrones naturales del cuerpo.</p>
                     <div class="location-badge">
                         <i class="fas fa-map-marker-alt"></i>
                         <span>Fray Justo Santa María de Oro 4582, Caseros</span>
@@ -72,24 +75,24 @@
         <h2 class="section-title">ACTIVIDADES Y PROGRAMAS</h2>
         <div class="services-grid">
             <div class="service-card">
-                <i class="fas fa-dumbbell"></i>
-                <h3>Primitive Training</h3>
-                <p>Entrenamiento dinámico enfocado en fuerza natural, estabilidad y control postural[cite: 6].</p>
-            </div>
-            <div class="service-card">
-                <i class="fas fa-shield-alt"></i>
-                <h3>Macebell & Clubbell</h3>
-                <p>Uso de clavas de hierro y mazas para tracción, fuerza de agarre y salud articular[cite: 6].</p>
-            </div>
-            <div class="service-card">
                 <i class="fas fa-child"></i>
+                <h3>Primitive Training</h3>
+                <p class="text-justified">Entrenamiento dinámico enfocado en fuerza natural, movilidad, estabilidad y control postural.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-dumbbell"></i>
+                <h3>Macebell & Clubbell</h3>
+                <p class="text-justified">Trabajo con clavas de hierro y mazas para fuerza de agarre, tracción y salud articular.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-running"></i>
                 <h3>Bodyweight & Flow</h3>
-                <p>Programas 100% con peso corporal para movilidad, potencia y fluidez de movimiento[cite: 6].</p>
+                <p class="text-justified">Programas 100% peso corporal sin elementos para agilidad, potencia y fluidez de movimiento.</p>
             </div>
             <div class="service-card">
                 <i class="fas fa-spa"></i>
                 <h3>Stretching & Yoga</h3>
-                <p>Flexibilidad asistida, elongación consciente y preparación neuromuscular[cite: 6].</p>
+                <p class="text-justified">Flexibilidad asistida, elongación consciente, Pilates Sculpt y preparación neuromuscular.</p>
             </div>
         </div>
     </section>
@@ -98,15 +101,15 @@
     <section id="galeria" class="gallery-section">
         <h2 class="section-title">GALERÍA DE ENTRENAMIENTOS</h2>
         <div class="gallery-grid" id="gallery-container">
-            <!-- Las imágenes se cargarán dinámicamente desde el JS -->
+            <!-- Las imágenes se cargan dinámicamente mediante JavaScript -->
         </div>
     </section>
 
-    <!-- Redes Sociales y Contacto -->
+    <!-- Footer / Redes Sociales y Contacto -->
     <footer id="contacto" class="footer">
         <div class="footer-container">
-            <h3>Conéctate con HAMPE</h3>
-            <p>Fuerza • Movimiento • Conciencia</p>
+            <h3>HAMPE CENTRO DE ENTRENAMIENTO</h3>
+            <p class="footer-tagline">FUERZA • MOVIMIENTO • CONCIENCIA</p>
             
             <div class="social-links">
                 <a href="https://wa.me/5491123947538" target="_blank" class="social-btn whatsapp">
@@ -121,7 +124,7 @@
             </div>
 
             <p class="address"><i class="fas fa-map-marker-alt"></i> Fray Justo Santa María de Oro 4582, Caseros</p>
-            <p class="copyright">&copy; 2026 HAMPE Centro de Entrenamiento. Todos los derechos reservados.</p>
+            <p class="copyright">&copy; 2026 HAMPE. Todos los derechos reservados.</p>
         </div>
     </footer>
 
