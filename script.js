@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
             item.className = 'gallery-item';
 
             const img = document.createElement('img');
-            img.src = `images/gallery/${imageName}`;
+            img.src = `gallery/${imageName}`;
             img.alt = 'Entrenamiento HAMPE';
             img.loading = 'lazy';
 
